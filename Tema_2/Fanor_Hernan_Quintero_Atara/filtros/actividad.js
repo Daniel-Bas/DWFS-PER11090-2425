@@ -48,8 +48,8 @@ function redConverter() {
     for (let matrix of iMatrix) {
       matrix[1] = 0; // Green Channel to 0
       matrix[2] = 0; // Blue Channel to 0
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -71,8 +71,8 @@ function greenConverter() {
       matrix[0] = 0; // Red Channel to 0
       matrix[2] = 0; // Blue Channel to 0
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -94,8 +94,8 @@ function blueConverter() {
       matrix[0] = 0; // Red Channel to 0
       matrix[1] = 0; // Green Channel to 0
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -124,8 +124,8 @@ function greyConverter() {
       matrix[1] = medianValue; // Green Channel to median
       matrix[2] = medianValue; // Blue Channel to median
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -152,8 +152,8 @@ function blackAndWhiteConverter() {
       matrix[1] = medianValue < 128 ? 0 : 255
       matrix[2] = medianValue < 128 ? 0 : 255
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -203,8 +203,8 @@ function dimBrightness(dimFactor) {
       matrix[1] /= dimFactor; // Green Channel to dimFactor
       matrix[2] /= dimFactor; // Blue Channel to dimFactor
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -229,8 +229,8 @@ function invertColors() {
       matrix[1] = 255 - matrix[1]; // Green Channel subtract
       matrix[2] = 255 - matrix[2]; // Blue Channel subtract
 
-    };
-  };
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -268,8 +268,8 @@ function merge(alphaFirst, alphaSecond) {
       matrix[1] = catMatrix[1] * alphaSecond + dogMatrix[1] * alphaFirst;
       matrix[2] = catMatrix[2] * alphaSecond + dogMatrix[2] * alphaFirst;
 
-    };
-  };
+    }
+  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
